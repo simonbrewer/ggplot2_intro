@@ -379,7 +379,7 @@ myplot + theme_wsj()
 
 A last and useful addon to **ggplot2** comes from an additional package **plotly**, which provides functions for generating interactive plots from R (and Python) for dashboards, websites, etc. The package includes a function `ggplotly()`, a wrapper that takes an existing **ggplot2** object and converts it to a plotly object, allowing zooming, data selection and other interactions. The following code remakes one of the earlier plots, with four data series, and then converts it to an interactive figure. You will need to install the **plotly** package for this code to work. 
 
-```{r}
+```{r message=FALSE}
 library(plotly)
 myplot = ggplot(subset(gapdata, country %in% jCountries),
        aes(x = year, y = lifeExp, color = country)) + geom_line() + geom_point() 
